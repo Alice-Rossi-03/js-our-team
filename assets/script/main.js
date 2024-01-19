@@ -52,7 +52,7 @@ let objectArray = [
     {
         name: "Barbara Ramos" ,	 	
         role: "Graphic Designer" , 
-        photo: "barbara-ramos-graphic-designer.jpg"
+        photo: "barbara-ramos-graphic-designer.jpg" 
     }
 
 ]
@@ -62,5 +62,18 @@ for(let i = 0; i < objectArray.length; i++){
     console.log(objectArray[i].name)
     console.log(objectArray[i].role)
     console.log(objectArray[i].photo)
+
+    let cardContainer = document.getElementById("card-container")
+
+    cardContainer.innerHTML += `
+        <div class="card col" style="width: 18rem;">
+            <img src="./assets/img/${objectArray[i].photo}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${objectArray[i].name}</h5>
+                <p class="card-text">${objectArray[i].role}</p>
+            </div>
+        </div>
+    `
+
 }
 
